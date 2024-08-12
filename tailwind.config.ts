@@ -8,13 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        c_black: "#010715",
+        c_yellow: "#FFE81A",
+        c_purple: "#4C29FF",
+        c_white: "#F5F6FF",
+      },
+      fontFamily: {
+        yipes: ["var(--font-yipes)"],
+        luxury: ["var(--font-luxury)"],
+        luxuryScript: ["var(--font-luxuryScript)"],
+        maxima: ["var(--font-maxima)"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("@pyncz/tailwind-mask-image"),],
 };
 export default config;

@@ -1,0 +1,170 @@
+@keyframes inviniteSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.inviniteSpin {
+  animation-name: inviniteSpin;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes inviniteSpin_2 {
+  0% {
+    rotate: 90deg;
+  }
+  100% {
+    rotate: 450deg;
+  }
+}
+
+@keyframes inviniteSpi_2_Invert {
+  0% {
+    rotate: -90deg;
+  }
+  100% {
+    rotate: -450deg;
+  }
+}
+
+@keyframes mask1Rotate {
+  0% {
+    rotate: -45deg;
+    opacity: 0;
+  }
+  100% {
+    rotate: 0deg;
+    opacity: 1;
+  }
+}
+
+.mask1 {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #4d29ff;
+  mask-repeat: no-repeat;
+  z-index: 20;
+  width: 100vw;
+  height: 100vw;
+  transform-origin: 0% 0%;
+  color: #f5f6ff;
+  mask-image: url("../../../public/svg/star_1_Fill.svg");
+  mask-position: center;
+  mask-size: cover;
+  animation: 1s cubic-bezier(0.22, 1, 0.36, 1) mask1Rotate;
+}
+
+@media (min-width: 768px) {
+  .mask1 {
+    mask-size: 90vw;
+  }
+}
+
+@keyframes mask2Rotate {
+  0% {
+    rotate: 0deg;
+    opacity: 1;
+  }
+  100% {
+    rotate: 30deg;
+    opacity: 1;
+  }
+}
+
+.mask2 {
+  position: absolute;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  transform-origin: 0% 0%;
+  color: #4c29ff;
+  /* animation: 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-name: mask2Rotate; */
+
+  animation-name: inviniteSpin_2;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes maskStar {
+  0% {
+    rotate: 0deg;
+    opacity: 0;
+  }
+  100% {
+    rotate: 30deg;
+    opacity: 1;
+  }
+}
+
+@keyframes maskStar2 {
+  0% {
+    rotate: 0deg;
+    opacity: 0;
+  }
+  100% {
+    rotate: -30deg;
+    opacity: 1;
+  }
+}
+
+.maskStar {
+  animation-name: inviniteSpin_2;
+  animation-delay: 0s;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+.maskStar2 {
+  animation-name: inviniteSpi_2_Invert;
+  animation-delay: 0s;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  text-shadow:
+    -1px -1px 0 #4c29ff,
+    1px -1px 0 #4c29ff,
+    -1px 1px 0 #4c29ff,
+    1px 1px 0 #4c29ff;
+}
+
+.ta_1 {
+  text-shadow:
+    -1px -1px 0 #010715,
+    1px -1px 0 #010715,
+    -1px 1px 0 #010715,
+    1px 1px 0 #010715;
+}
+
+.stardustMask {
+  mask-image: url("../../../public/svg/star_1_Fill.svg");
+  mask-position: center;
+  /* mask-size: cover; */
+  mask-repeat: no-repeat;
+  z-index: 10;
+  background-color: #00000000;
+  animation: 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-name: maskStar;
+  animation-delay: 0.5s;
+}
+
+.stardustSVG {
+  animation-name: inviniteSpi_2_Invert;
+  animation-delay: 0s;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
